@@ -15,6 +15,8 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { AuthorDetailComponent } from './author-detail/author-detail.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { HomeComponent } from './home/home.component';
+import { AuthorsComponent } from './authors/authors.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AlbumDetailComponent } from './album-detail/album-detail.component';
     PostDetailComponent,
     AuthorDetailComponent,
     AlbumsComponent,
-    AlbumDetailComponent
+    AlbumDetailComponent,
+    HomeComponent,
+    AuthorsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,8 @@ import { AlbumDetailComponent } from './album-detail/album-detail.component';
     RouterModule.forRoot([
       {path: 'posts', component: PostComponent},
       {path: 'post/:id', component: PostDetailComponent},
-      {path: 'author/:id', component: AuthorDetailComponent },
+      {path: 'authors', component: AuthorsComponent},
+      {path: 'authors/:id', component: AuthorDetailComponent },
       {path: 'albums', component: AlbumsComponent},
       {path: 'albums/:id', component: AlbumDetailComponent }
     ]),

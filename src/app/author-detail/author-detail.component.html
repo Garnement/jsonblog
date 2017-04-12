@@ -1,7 +1,87 @@
 <div *ngFor="let author of authorData">
-<h1><small>Meet</small> {{ author.name }}</h1>
+<h1 class="text-center"><small>Meet</small> {{ author.name }}</h1>
 </div>
-<p>List of posts</p>
-<ul>
-  <li *ngFor="let post of authorPosts"><a [routerLink]="['/post', post.id]">{{ post.title }}</a></li>
-</ul>
+<div class="row">
+  <div class="col-md-6">
+    <h5>List of posts:</h5>
+    <ul>
+      <li *ngFor="let post of authorPosts"><a [routerLink]="['/post', post.id]">{{ post.title }}</a></li>
+    </ul>
+  </div>
+  <div class="col-md-6" *ngFor="let author of authorData">
+    <div class="row">
+      <h5 class="text-center">Complete profile:</h5>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+      <form>
+        <div class="form-group">
+          <label for="name" class="col-md-4">Name:</label>
+          <input type="text" class="col-md-7" placeholder="{{author.name}}">
+        </div>
+
+        <div class="form-group">
+          <label for="username" class="col-md-4">Username:</label>
+          <input type="text" class="col-md-7" placeholder="{{author.username}}">
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="col-md-4">Email :</label>
+          <input type="email" class="col-md-7" placeholder="{{author.email }}">
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="col-md-4">Phone :</label>
+          <input type="phone" class="col-md-7" placeholder="{{author.phone }}">
+        </div>
+
+        <div class="form-group">
+          <label for="website" class="col-md-4">Website :</label>
+          <input type="text" class="col-md-5" placeholder="{{author.website }}"> <a href="{{author.website}}" class="btn btn-info col-md-2" target="_blank">Go!</a>
+        </div>
+
+        <h5 class="text-center">Address</h5>
+
+        <div class="form-group">
+          <label for="street" class="col-md-4">Street :</label>
+          <input type="text" class="col-md-7" placeholder="{{author.address['street']}}">
+        </div>
+
+        <div class="form-group">
+          <label for="suite" class="col-md-4">Suite :</label>
+          <input type="text" class="col-md-7" placeholder="{{author.address['suite']}}">
+        </div>
+
+        <div class="form-group">
+          <label for="city" class="col-md-4">City :</label>
+          <input type="text" class="col-md-7" placeholder="{{author.address['city']}}">
+        </div>
+
+        <div class="form-group">
+          <label for="zipcode" class="col-md-4">Zipcode :</label>
+          <input type="text" class="col-md-7" placeholder="{{author.address['zipcode']}}">
+        </div>
+
+        <h5 class="text-center">Company</h5>
+
+        <div class="form-group">
+          <label for="companyName" class="col-md-4">Name :</label>
+          <input type="text" class="col-md-7" placeholder="{{author.company['name']}}">
+        </div>
+
+        <div class="form-group">
+          <label for="catchPhrase" class="col-md-4">Catchphrase :</label>
+          <input type="text" class="col-md-7" placeholder="{{author.company['catchPhrase']}}">
+        </div>
+
+        <div class="form-group">
+          <label for="bs" class="col-md-4">BS :</label>
+          <input type="text" class="col-md-7" placeholder="{{author.company['bs']}}">
+        </div>
+
+      </form>
+
+    </div>
+    </div>
+  </div> <!-- /col-md-6-->
+</div> <!-- /row -->
