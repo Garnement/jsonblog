@@ -9,3 +9,21 @@
 .primary-text-color    { color: #212121; }
 .secondary-text-color  { color: #757575; }
 .divider-color         { border-color: #BDBDBD; }
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.selected {
+    color: #ff5722;
+    text-decoration: none;
+}

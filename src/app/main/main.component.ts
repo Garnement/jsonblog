@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PostsService } from "../posts.service";
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'my-main',
   templateUrl: './main.component.html',
