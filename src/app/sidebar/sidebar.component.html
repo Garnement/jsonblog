@@ -1,0 +1,15 @@
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-12">
+    <h3 class="align-center">Our authors:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+    <div class="list-group">
+      <a [routerLink]="['/author', user.id]" *ngFor="let user of users" class="list-group-item list-item-group-action">{{ user.name }}</a>
+    </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div *ngFor="let author of authorData">
+<h1><small>Meet</small> {{ author.name }}</h1>
+</div>
+<p>List of posts</p>
+<ul>
+  <li *ngFor="let post of authorPosts"><a [routerLink]="['/post', post.id]">{{ post.title }}</a></li>
+</ul>

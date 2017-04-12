@@ -1,0 +1,13 @@
+<div class="col-md-8">
+  <div *ngFor="let post of posts">
+    <div class="card">
+      <div class="card-header">
+        <h4>{{ post.title }}</h4>
+      </div>
+      <div class="card-block">
+        <p class="card-text">{{ post.body }}</p>
+        <a [routerLink]="['/post', post.id]" class="btn btn-primary">More</a>  
+      </div>
+    </div>
+  </div>
+</div>

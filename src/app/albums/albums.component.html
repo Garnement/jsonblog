@@ -1,0 +1,6 @@
+<h1>List of our incredible albums</h1>
+<div class="row">
+  <div class="col-md-3" *ngFor="let album of albums">
+    <a [routerLink]="['/albums', album.id]" class="albums" data-id="{{album.id}}">{{album.title}}</a>
+  </div>
+</div>

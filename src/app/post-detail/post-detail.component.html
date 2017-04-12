@@ -1,0 +1,15 @@
+<div *ngFor="let post of postDatas">
+  <h3><small>Titre:</small> {{ post.title }}</h3>
+  <p>{{ post.body }}</p>
+</div>
+<div *ngFor="let com of commentsPost">
+ <div class="card card-outline-success mb-3 text-center">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+      <p>{{com.body}}</p>
+      <footer>Author: {{com.name }} email:<cite title="Source Title"> {{com.email}}</cite></footer>
+    </blockquote>
+  </div>
+</div>
+</div>
+<a [routerLink]="['']">Go home</a>
