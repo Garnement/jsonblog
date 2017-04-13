@@ -17,6 +17,7 @@ import { AlbumDetailComponent }   from './album-detail/album-detail.component';
 import { HomeComponent }          from './home/home.component';
 import { AuthorsComponent }       from './authors/authors.component';
 import { TodosComponent }         from './todos/todos.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TodosComponent }         from './todos/todos.component';
     AlbumDetailComponent,
     HomeComponent,
     AuthorsComponent,
-    TodosComponent
+    TodosComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

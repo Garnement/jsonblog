@@ -9,14 +9,20 @@ export class AlbumsService {
 
   albumsUrl: string = 'https://jsonplaceholder.typicode.com/albums';
   
-  albumContent: string = 'https://jsonplaceholder.typicode.com/albums';
 
   getAlbums(){
     return this.http.get(this.albumsUrl).map(res => res.json());
   }
 
+  getAlbumInfos(id) {
+    return this.http.get(`${this.albumsUrl}/${id}`).map(res =>{
+      console.log(res.json()); return res.json();
+    });
+
+  }
+
   getPhotosByAlbum(id){
-    return this.http.get(`${this.albumContent}/${id}/photos`).map(res => res.json());
+    return this.http.get(`${this.albumsUrl}/${id}/photos`).map(res => res.json());
   }
 
 }

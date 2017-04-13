@@ -15,7 +15,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class PostDetailComponent implements OnInit {
     
-   postDatas: any[];
+   postDatas: any = {};
    commentsPost: any[];
    id: Observable<number>;
 
@@ -37,7 +37,7 @@ export class PostDetailComponent implements OnInit {
 
     //this.postsService.getPost(this.id).subscribe( (data) => this.postDatas = data );
 
-    this.postsService.getPost(this.id).subscribe( (data) => this.postDatas = [data] );
+    this.postsService.getPost(this.id).subscribe( (data) => this.postDatas = data );
 
     this.postsService.getComments(this.id).subscribe( (data) => this.commentsPost = data );
   }
