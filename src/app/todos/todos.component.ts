@@ -13,6 +13,7 @@ export class TodosComponent implements OnInit {
   todos: any[];
   users: any[];
   todosData: any[];
+  userSelected: any[];
 
 
   constructor(private todosService: TodosService,
@@ -20,6 +21,7 @@ export class TodosComponent implements OnInit {
 
   getTodosByUser(id){
     this.todosService.getTodosByUser(id).subscribe(data => this.todosData = data);
+    
     console.log(this.todosData)
   }
 
