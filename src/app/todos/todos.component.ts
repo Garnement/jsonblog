@@ -18,9 +18,11 @@ export class TodosComponent implements OnInit {
 
   constructor(private todosService: TodosService,
               private usersService: UsersService) { }
-
+  
+  //Récupération des ToDo en fonction de l'user
   getTodosByUser(id){
     this.todosService.getTodosByUser(id).subscribe(data => this.todosData = data);
+    this.userSelected = id;
     
     console.log(this.todosData)
   }

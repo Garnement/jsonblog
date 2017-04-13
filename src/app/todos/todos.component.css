@@ -60,7 +60,7 @@
 
 .userTask {
     text-align: center;
-    border: 1px solid #FF5722;
+    border-radius: 2px;
     margin: 1em;
     cursor: pointer;
     background-color: #03A9F4;
@@ -71,5 +71,5 @@
 }
 
 .userSelected {
-    background-color: red;
+    background-color: #FF5722;
 }

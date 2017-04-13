@@ -4,7 +4,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-2 userTask" (click)="getTodosByUser(user.id)" *ngFor="let user of users" [class.userSelect]>
+  <div class="col-md-2 userTask" (click)="getTodosByUser(user.id)" *ngFor="let user of users" [class.userSelected]="user.id === userSelected">
     {{user.name}}
   </div>
 </div>

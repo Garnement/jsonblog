@@ -1,16 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { BrowserModule }          from '@angular/platform-browser';
+import { NgModule }               from '@angular/core';
+import { FormsModule }            from '@angular/forms';
+import { HttpModule }             from '@angular/http';
+import { RouterModule }           from '@angular/router';
 
-import {Ng2PaginationModule } from  'ng2-pagination';
+import {Ng2PaginationModule }     from  'ng2-pagination';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { MainComponent } from './main/main.component';
-import { PostComponent } from './post/post.component';
+import { AppComponent }           from './app.component';
+import { PostComponent }          from './post/post.component';
 
 import { AppRoutingModule }       from './app-routing/app-routing.module';
 import { PostDetailComponent }    from './post-detail/post-detail.component';
@@ -24,9 +21,6 @@ import { TodosComponent }         from './todos/todos.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SidebarComponent,
-    MainComponent,
     PostComponent,
     PostDetailComponent,
     AuthorDetailComponent,

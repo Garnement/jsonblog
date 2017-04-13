@@ -1,19 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { HeaderComponent } from '../header/header.component';
-import { SidebarComponent } from '../sidebar/sidebar.component';
+import { PostsService } from '../posts.service';
+
+
 
 @Component({
   selector: 'my-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
+  providers: [PostsService]
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
+  posts: any[];
+
+  constructor(private postsService: PostsService) { }
 
   ngOnInit() {
+    this.postsService.getPosts().subscribe( (data) => this.posts = data);
   }
 
 }
